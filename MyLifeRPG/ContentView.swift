@@ -9,8 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-
+let palette =  ColorPalette()
 
 class AppViewModel: ObservableObject {
     let auth = Auth.auth()
@@ -21,13 +20,13 @@ class AppViewModel: ObservableObject {
             guard result != nil, error == nil else {
                 return
             }
-            print("sucess !!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("Login success")
             
             DispatchQueue.main.async {
                 self?.signedIn = true
             }
             
-            // sucess
+            // Success
         }
     }
     func signUp(email: String, password: String) {
@@ -38,7 +37,7 @@ class AppViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self?.signedIn = true
             }
-            // sucess
+            // Success
         }
         
     }
@@ -60,7 +59,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if viewModel.signedIn {
-                
                 SignOutView()
             } else {
                 SignInView()
@@ -80,16 +78,17 @@ struct SignInView: View {
     var body: some View {
         
         VStack {
+            Text("MyLifeRPG")
             Text("Login")
                 .bold()
             TextField("email", text: $username)
                 .padding()
-                .background(lightGreyColor)
+                .background(palette.lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom,20)
                 .autocapitalization(.none)
             SecureField("Password", text: $password).padding()
-                .background(lightGreyColor)
+                .background(palette.lightGreyColor)
                 .padding( .bottom, 20).cornerRadius(5.0)
             Button(action: {
                 viewModel.signIn(email: username, password: password)
@@ -98,20 +97,53 @@ struct SignInView: View {
                 Text("Sign in")
                 
             }
-            NavigationLink("create account", destination: SignupView())
-            
+            NavigationLink("Create an account", destination: SignupView()).padding(.top)
         }
     }
     
 }
 
 struct SignOutView: View {
-    
-    @EnvironmentObject var viewModel: AppViewModel
+    var body: some View {
+        TabView {
+            NavigationView {
+                DashboardView()
+            }.tabItem {
+                Image(systemName: "gauge")
+            }
+            
+            NavigationView {
+                QuestView()
+            }.tabItem {
+                Image(systemName: "list.bullet")
+            }
+            NavigationView {
+                SettingsView()
+            }.tabItem {
+                Image(systemName: "gear")
+            }
+        }
+    }
+}
+
+
+/**
+ Dashboard view
+ */
+struct DashboardView: View {
+    var body: some View {
+        ScrollView {
+            Text("Hello user")
+        }
+    }
+}
+
+struct SettingsView: View {
+    @EnvironmentObject var viewModel: AppViewModel //todo : Try to make it global
     
     var body: some View {
-        VStack {
-            Text("Hello user")
+        ScrollView {
+            Text("Options")
             Button(action: {
                 viewModel.signOut()
             }) {
@@ -121,6 +153,23 @@ struct SignOutView: View {
     }
 }
 
+/**
+ Quest view
+ */
+struct QuestView: View {
+    var body: some View {
+        ScrollView {
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+            Text("coucou")
+        }
+    }
+}
 
 struct SignupView: View {
     @State var username: String = ""
@@ -135,12 +184,12 @@ struct SignupView: View {
                 .bold()
             TextField("email", text: $username)
                 .padding()
-                .background(lightGreyColor)
+                .background(palette.lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom,20)
                 .autocapitalization(.none)
             SecureField("Password", text: $password).padding()
-                .background(lightGreyColor)
+                .background(palette.lightGreyColor)
                 .padding( .bottom, 20).cornerRadius(5.0)
             Button(action: {
                 viewModel.signUp(email: username, password: password)

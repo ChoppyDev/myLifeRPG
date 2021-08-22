@@ -14,6 +14,7 @@
 		4A93C83B26CFF4420025C300 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4A93C83A26CFF4420025C300 /* FirebaseStorage */; };
 		4A93C83D26CFF4420025C300 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4A93C83C26CFF4420025C300 /* FirebaseAuth */; };
 		4A93C83F26CFF4420025C300 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A93C83E26CFF4420025C300 /* FirebaseFirestore */; };
+		4A93C84526D28A210025C300 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93C84426D28A200025C300 /* ColorPalette.swift */; };
 		4A9F30DD26CFB97C004AC175 /* MyLifeRPGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F30DC26CFB97C004AC175 /* MyLifeRPGApp.swift */; };
 		4A9F30DF26CFB97C004AC175 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F30DE26CFB97C004AC175 /* ContentView.swift */; };
 		4A9F30E126CFB980004AC175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F30E026CFB980004AC175 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		4A9F310C26CFBDDC004AC175 /* QuestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F310B26CFBDDC004AC175 /* QuestBuilder.swift */; };
 		4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F311326CFBF35004AC175 /* QuestCategory.swift */; };
 		4A9F313C26CFE9CD004AC175 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F313B26CFE9CD004AC175 /* Player.swift */; };
+		4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5897926D2BD640091C0BF /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		4A93C82E26CFF3440025C300 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A93C84426D28A200025C300 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		4A9F30D926CFB97C004AC175 /* MyLifeRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLifeRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9F30DC26CFB97C004AC175 /* MyLifeRPGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLifeRPGApp.swift; sourceTree = "<group>"; };
 		4A9F30DE26CFB97C004AC175 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		4A9F310B26CFBDDC004AC175 /* QuestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBuilder.swift; sourceTree = "<group>"; };
 		4A9F311326CFBF35004AC175 /* QuestCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCategory.swift; sourceTree = "<group>"; };
 		4A9F313B26CFE9CD004AC175 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		4AC5897926D2BD640091C0BF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A93C84326D28A0F0025C300 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				4A93C84426D28A200025C300 /* ColorPalette.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		4A9F30D026CFB97B004AC175 = {
 			isa = PBXGroup;
 			children = (
+				4AC5897826D2BD3C0091C0BF /* StdLib */,
 				4A9F30DB26CFB97C004AC175 /* MyLifeRPG */,
 				4A9F30ED26CFB980004AC175 /* MyLifeRPGTests */,
 				4A9F30F826CFB980004AC175 /* MyLifeRPGUITests */,
@@ -115,6 +128,7 @@
 		4A9F30DB26CFB97C004AC175 /* MyLifeRPG */ = {
 			isa = PBXGroup;
 			children = (
+				4A93C84326D28A0F0025C300 /* Theme */,
 				4A93C82E26CFF3440025C300 /* GoogleService-Info.plist */,
 				4A9F313A26CFE9A8004AC175 /* Model */,
 				4A9F310A26CFBD9D004AC175 /* Quest */,
@@ -168,6 +182,14 @@
 				4A9F313B26CFE9CD004AC175 /* Player.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4AC5897826D2BD3C0091C0BF /* StdLib */ = {
+			isa = PBXGroup;
+			children = (
+				4AC5897926D2BD640091C0BF /* Logger.swift */,
+			);
+			path = StdLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9F30DF26CFB97C004AC175 /* ContentView.swift in Sources */,
+				4A93C84526D28A210025C300 /* ColorPalette.swift in Sources */,
 				4A9F30DD26CFB97C004AC175 /* MyLifeRPGApp.swift in Sources */,
 				4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */,
+				4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */,
 				4A9F313C26CFE9CD004AC175 /* Player.swift in Sources */,
 				4A9F310C26CFBDDC004AC175 /* QuestBuilder.swift in Sources */,
 			);
