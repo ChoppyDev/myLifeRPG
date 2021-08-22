@@ -20,8 +20,6 @@ class AppViewModel: ObservableObject {
             guard result != nil, error == nil else {
                 return
             }
-            print("Login success")
-            
             DispatchQueue.main.async {
                 self?.signedIn = true
             }
@@ -65,7 +63,7 @@ struct ContentView: View {
             }
         }.onAppear {
             viewModel.signedIn = viewModel.isSignedIn
-        }.navigationTitle("Sign up")
+        }.navigationTitle(i18n.createAccount)
     }
 }
 
@@ -78,16 +76,15 @@ struct SignInView: View {
     var body: some View {
         
         VStack {
-            Text("MyLifeRPG")
-            Text("Login")
+            Text(i18n.login)
                 .bold()
-            TextField("email", text: $username)
+            TextField(i18n.username, text: $username)
                 .padding()
                 .background(palette.lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom,20)
                 .autocapitalization(.none)
-            SecureField("Password", text: $password).padding()
+            SecureField(i18n.password, text: $password).padding()
                 .background(palette.lightGreyColor)
                 .padding( .bottom, 20).cornerRadius(5.0)
             Button(action: {
@@ -97,7 +94,7 @@ struct SignInView: View {
                 Text("Sign in")
                 
             }
-            NavigationLink("Create an account", destination: SignupView()).padding(.top)
+            NavigationLink(i18n.createAccount, destination: SignupView()).padding(.top)
         }
     }
     
@@ -119,7 +116,7 @@ struct SignOutView: View {
             }
             NavigationView {
                 SettingsView()
-            }.tabItem {
+            }.tabItem {
                 Image(systemName: "gear")
             }
         }
@@ -147,7 +144,7 @@ struct SettingsView: View {
             Button(action: {
                 viewModel.signOut()
             }) {
-                Text("Sign out")
+                Text(i18n.logout)
             }
         }
     }
@@ -180,22 +177,22 @@ struct SignupView: View {
     var body: some View {
         
         VStack {
-            Text("Register")
+            Text(i18n.createAccount)
                 .bold()
-            TextField("email", text: $username)
+            TextField(i18n.username, text: $username)
                 .padding()
                 .background(palette.lightGreyColor)
                 .cornerRadius(5.0)
                 .padding(.bottom,20)
                 .autocapitalization(.none)
-            SecureField("Password", text: $password).padding()
+            SecureField(i18n.password, text: $password).padding()
                 .background(palette.lightGreyColor)
                 .padding( .bottom, 20).cornerRadius(5.0)
             Button(action: {
                 viewModel.signUp(email: username, password: password)
                 
             }) {
-                Text("Sign up")
+                Text(i18n.createAccount)
             }
             
         }

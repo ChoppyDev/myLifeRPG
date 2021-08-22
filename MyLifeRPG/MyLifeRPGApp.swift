@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 public let logger = Logger.sharedInstance
 
+public let i18n = I18n()
 
 @main
 struct MyLifeRPGApp: App {

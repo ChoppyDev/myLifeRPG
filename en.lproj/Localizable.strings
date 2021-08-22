@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  MyLifeRPG
+
+  Created by Nicolas Klein on 22/08/2021.
+  
+*/
+"login"="Login";
+"logout"="Logout";
+"username"="username";
+"password"="password";
+"create_account"="Create an account";
+

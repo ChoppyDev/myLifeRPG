@@ -25,6 +25,8 @@
 		4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F311326CFBF35004AC175 /* QuestCategory.swift */; };
 		4A9F313C26CFE9CD004AC175 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F313B26CFE9CD004AC175 /* Player.swift */; };
 		4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5897926D2BD640091C0BF /* Logger.swift */; };
+		4AC5898926D2CA3C0091C0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5898B26D2CA3C0091C0BF /* Localizable.strings */; };
+		4AC589A526D2CB670091C0BF /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC589A426D2CB670091C0BF /* I18n.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,9 @@
 		4A9F311326CFBF35004AC175 /* QuestCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCategory.swift; sourceTree = "<group>"; };
 		4A9F313B26CFE9CD004AC175 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4AC5897926D2BD640091C0BF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4AC5898A26D2CA3C0091C0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4AC589A026D2CB2C0091C0BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4AC589A426D2CB670091C0BF /* I18n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		4A9F30D026CFB97B004AC175 = {
 			isa = PBXGroup;
 			children = (
+				4AC5898B26D2CA3C0091C0BF /* Localizable.strings */,
 				4AC5897826D2BD3C0091C0BF /* StdLib */,
 				4A9F30DB26CFB97C004AC175 /* MyLifeRPG */,
 				4A9F30ED26CFB980004AC175 /* MyLifeRPGTests */,
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4A9F313B26CFE9CD004AC175 /* Player.swift */,
+				4AC589A426D2CB670091C0BF /* I18n.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 4A9F30D026CFB97B004AC175;
 			packageReferences = (
@@ -307,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9F30E426CFB980004AC175 /* Preview Assets.xcassets in Resources */,
+				4AC5898926D2CA3C0091C0BF /* Localizable.strings in Resources */,
 				4A9F30E126CFB980004AC175 /* Assets.xcassets in Resources */,
 				4A93C82F26CFF3440025C300 /* GoogleService-Info.plist in Resources */,
 			);
@@ -338,6 +347,7 @@
 				4A9F30DD26CFB97C004AC175 /* MyLifeRPGApp.swift in Sources */,
 				4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */,
 				4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */,
+				4AC589A526D2CB670091C0BF /* I18n.swift in Sources */,
 				4A9F313C26CFE9CD004AC175 /* Player.swift in Sources */,
 				4A9F310C26CFBDDC004AC175 /* QuestBuilder.swift in Sources */,
 			);
@@ -374,11 +384,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4AC5898B26D2CA3C0091C0BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AC5898A26D2CA3C0091C0BF /* en */,
+				4AC589A026D2CB2C0091C0BF /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4A9F30FC26CFB980004AC175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -440,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

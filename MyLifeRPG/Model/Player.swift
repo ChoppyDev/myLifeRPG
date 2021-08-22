@@ -10,6 +10,5 @@ import Foundation
 struct Player {
     let uid: String
     var name : String
-    
-    
+    var xp: String
 }
