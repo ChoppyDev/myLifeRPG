@@ -35,6 +35,11 @@ struct MyLifeRPGApp: App {
     init() {
         print("app started")
         logger.debug(s: "Debug mode is set to : \(appDelegate.isDebug)")
+        let b = Build()
+        b.createReadAndWriteFile()
+//        let test = File()
+//
+//        test.test()
     }
     var body: some Scene {
         WindowGroup {
@@ -43,6 +48,5 @@ struct MyLifeRPGApp: App {
             
         }
     }
-    
 }
 

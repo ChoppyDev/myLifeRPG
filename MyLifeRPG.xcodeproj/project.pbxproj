@@ -27,6 +27,9 @@
 		4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC5897926D2BD640091C0BF /* Logger.swift */; };
 		4AC5898926D2CA3C0091C0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5898B26D2CA3C0091C0BF /* Localizable.strings */; };
 		4AC589A526D2CB670091C0BF /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC589A426D2CB670091C0BF /* I18n.swift */; };
+		4AEA0ECE26D38AC500E6FD1E /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA0ECD26D38AC500E6FD1E /* Build.swift */; };
+		4AEA0F0326D3A3D400E6FD1E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA0F0226D3A3D400E6FD1E /* File.swift */; };
+		4AEA0F1926D3C65000E6FD1E /* file in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA0F1826D3C65000E6FD1E /* file */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		4AC5898A26D2CA3C0091C0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4AC589A026D2CB2C0091C0BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4AC589A426D2CB670091C0BF /* I18n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
+		4AEA0ECD26D38AC500E6FD1E /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		4AEA0F0226D3A3D400E6FD1E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		4AEA0F1826D3C65000E6FD1E /* file */ = {isa = PBXFileReference; lastKnownFileType = text; path = file; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 		4A9F30D026CFB97B004AC175 = {
 			isa = PBXGroup;
 			children = (
+				4AEA0F1826D3C65000E6FD1E /* file */,
+				4AEA0ECD26D38AC500E6FD1E /* Build.swift */,
+				4AEA0F0126D3A3B700E6FD1E /* test */,
 				4AC5898B26D2CA3C0091C0BF /* Localizable.strings */,
 				4AC5897826D2BD3C0091C0BF /* StdLib */,
 				4A9F30DB26CFB97C004AC175 /* MyLifeRPG */,
@@ -199,6 +208,14 @@
 			path = StdLib;
 			sourceTree = "<group>";
 		};
+		4AEA0F0126D3A3B700E6FD1E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				4AEA0F0226D3A3D400E6FD1E /* File.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +226,7 @@
 				4A9F30D526CFB97B004AC175 /* Sources */,
 				4A9F30D626CFB97B004AC175 /* Frameworks */,
 				4A9F30D726CFB97B004AC175 /* Resources */,
+				4AEA0ECC26D38A6400E6FD1E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -315,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9F30E426CFB980004AC175 /* Preview Assets.xcassets in Resources */,
+				4AEA0F1926D3C65000E6FD1E /* file in Resources */,
 				4AC5898926D2CA3C0091C0BF /* Localizable.strings in Resources */,
 				4A9F30E126CFB980004AC175 /* Assets.xcassets in Resources */,
 				4A93C82F26CFF3440025C300 /* GoogleService-Info.plist in Resources */,
@@ -337,6 +356,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AEA0ECC26D38A6400E6FD1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env xcrun --sdk macosx swift";
+			shellScript = "import Foundation\nprint(\"helloooooooooo\")\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A9F30D526CFB97B004AC175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -347,6 +386,8 @@
 				4A9F30DD26CFB97C004AC175 /* MyLifeRPGApp.swift in Sources */,
 				4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */,
 				4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */,
+				4AEA0F0326D3A3D400E6FD1E /* File.swift in Sources */,
+				4AEA0ECE26D38AC500E6FD1E /* Build.swift in Sources */,
 				4AC589A526D2CB670091C0BF /* I18n.swift in Sources */,
 				4A9F313C26CFE9CD004AC175 /* Player.swift in Sources */,
 				4A9F310C26CFBDDC004AC175 /* QuestBuilder.swift in Sources */,

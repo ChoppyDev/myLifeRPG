@@ -72,6 +72,11 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
+            key = "SRCROOT"
+            value = "${SRCROOT}"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "debug"
             value = "true"
             isEnabled = "YES">

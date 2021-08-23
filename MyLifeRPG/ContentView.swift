@@ -163,7 +163,6 @@ struct QuestView: View {
             Text("coucou")
             Text("coucou")
             Text("coucou")
-            Text("coucou")
         }
     }
 }
