@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A913E38275968980072683F /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A913E37275968980072683F /* UserStorage.swift */; };
 		4A93C82F26CFF3440025C300 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A93C82E26CFF3440025C300 /* GoogleService-Info.plist */; };
 		4A93C83526CFF4420025C300 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 4A93C83426CFF4420025C300 /* FirebaseFunctions */; };
 		4A93C83726CFF4420025C300 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4A93C83626CFF4420025C300 /* FirebaseAnalytics */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A913E37275968980072683F /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		4A93C82E26CFF3440025C300 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A93C84426D28A200025C300 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		4A9F30D926CFB97C004AC175 /* MyLifeRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLifeRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 			children = (
 				4A9F313B26CFE9CD004AC175 /* Player.swift */,
 				4AC589A426D2CB670091C0BF /* I18n.swift */,
+				4A913E37275968980072683F /* UserStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				4A9F30DF26CFB97C004AC175 /* ContentView.swift in Sources */,
 				4A93C84526D28A210025C300 /* ColorPalette.swift in Sources */,
 				4A9F30DD26CFB97C004AC175 /* MyLifeRPGApp.swift in Sources */,
+				4A913E38275968980072683F /* UserStorage.swift in Sources */,
 				4A9F311426CFBF35004AC175 /* QuestCategory.swift in Sources */,
 				4AC5897A26D2BD640091C0BF /* Logger.swift in Sources */,
 				4AEA0F0326D3A3D400E6FD1E /* File.swift in Sources */,

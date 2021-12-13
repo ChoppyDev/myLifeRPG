@@ -59,11 +59,11 @@ struct ContentView: View {
             if viewModel.signedIn {
                 SignOutView()
             } else {
-                SignInView()
+                SignInView().padding()
             }
         }.onAppear {
             viewModel.signedIn = viewModel.isSignedIn
-        }.navigationTitle(i18n.createAccount)
+        }
     }
 }
 
